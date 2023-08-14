@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+  <title>HAPACOL</title>
+</head>
+<body>
+  <div class="background"></div>
+  <div class="overlay" id="overlay">
+    <form class="form" id="form">     
+      <input type="text" id="username" placeholder="Tên nhà thuốc của bạn" class="input">
+      <input type="number" id="birthdate" class="input" placeholder="Số năm đồng hành cùng Hapacol" min="0" max="20">
+      <p id="errorText"></p>
+      <button type="submit" class="submit-button">Gửi trao yêu thương ngay</button>
+    </form>
+  </div>
+   <div class="content text-center" id="content">
+    <p id="display-name" class="lead"></p>
+    <p id="slogan" class="lead"></p>
+  </div>
+  <script src="script.js" defer></script> 
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> <!-- Required for some Bootstrap features -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

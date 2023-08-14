@@ -3,6 +3,7 @@ body, html {
     padding: 0;
     height: 100%;
     font-family: Arial, sans-serif;
+    font-size: 20px;
   }
   
   .background {
@@ -25,22 +26,22 @@ body, html {
   }
   
   .form {
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0);
     padding: 20px;
     border-radius: 8px;
     text-align: center;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    max-width: 400px;
+    max-width: 60%;
     width: 90%;
   }
   
   .input {
-    width: 80%;
+    width: 100%;
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
   }
+  
   
   .submit-button {
     background-color: #000080;
@@ -52,41 +53,55 @@ body, html {
     font-size: 20;
   }
   
-  
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
   #display-name {
-    font-size: 2rem;
-    display: inline-block;
     position: absolute;
+    width: 100%;
+    font-weight: 400;
+
+    text-align: center;
     color: #fff;
+    white-space: nowrap
   }
   
-#errorText{
-  font-size: 1rem;
-
+#errorText{ 
   color: red;
 }
   
-  #slogan{
-    font-size: 2rem;
-    display: inline-block;
+  #slogan{   
     position: absolute;
+    text-align: center;
     color: #fff;
+    width: 100%;
+    white-space: nowrap;
+    font-weight: 400;
   }
   
   p {
-    font-size: 1.2rem;
+    font-size: 20px;
   }
   
-  @media (max-width: 768px) {
-    h1 {
-      font-size: 2rem;
-    }
-  
+  @media (max-width: 768px) { 
     p {
-      font-size: 1rem;
+      font-size: 11px;
     }
     form {
         max-width: 200px;
+      }
+  }
+
+  @media (max-width: 376) {  
+    p {
+      font-size: 6px;
+    }
+    form {
+        max-width: 100px;
       }
   }
   

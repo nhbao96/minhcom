@@ -1,0 +1,25 @@
+{
+  "name": "minhcom",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server -o /index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nhbao96/minhcom.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nhbao96/minhcom/issues"
+  },
+  "homepage": "https://github.com/nhbao96/minhcom#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}

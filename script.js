@@ -22,7 +22,13 @@ numberInput.addEventListener('input', function() {
 
 form.addEventListener('submit', function(event) {
   event.preventDefault();
-  
+
+  const screenWidth = window.innerWidth;
+  const baseFontSize = 16; // Define your base font size here
+
+  // Calculate the dynamic font size based on the screen width
+  const fontSize = baseFontSize + screenWidth / 100;
+
   const username = document.getElementById('username').value;
 
   const birthdate = document.getElementById('birthdate').value; 
@@ -30,12 +36,17 @@ form.addEventListener('submit', function(event) {
   content.style.display = 'block';
   displayName.textContent =  birthdate +" năm nhà thuốc  "+username;
 
+  displayName.style.fontSize = fontSize;
   const h1Width = displayName.offsetWidth;
   const h1Height = displayName.offsetHeight;
+  console.log("height = "+window.innerHeight);
+  console.log(" displayName.offsetHeight = "+  displayName.offsetHeight  );
   var left = (window.innerWidth - h1Width) / 2;
-  var top = (window.innerHeight - h1Height) / 2 - h1Height*3
+  var top = (window.innerHeight - h1Height) / 2 - h1Height;
   displayName.style.left =`${left}px`;
   displayName.style.top = `${top}px`;
+
+
   top += (5 +h1Height);
   var slogan = "Thuốc gần nhà bà con trông cậy";
   switch(birthdate)
@@ -56,8 +67,8 @@ form.addEventListener('submit', function(event) {
       break;
   }
   sloganTag.textContent = slogan;
+  sloganTag.style.fontSize = fontSize;
   left = (window.innerWidth - sloganTag.offsetWidth) / 2;
   sloganTag.style.left =`${left}px`;
   sloganTag.style.top = `${top}px`;
-
 });

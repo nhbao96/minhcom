@@ -6,7 +6,7 @@ body, html {
   }
   
   .background {
-    background-image: url('https://vcdn1-kinhdoanh.vnecdn.net/2021/09/15/settop18-1631688361-5480-1631688476.jpg?w=500&h=300&q=100&dpr=1&fit=crop&s=pcYU03TM_EzLLm9TxdBsDA'); /* Đường dẫn đến hình nền */
+    background-image: url('logo.jpg'); /* Đường dẫn đến hình nền */
     background-size: cover;
     background-position: center;
     position: fixed;
@@ -43,18 +43,28 @@ body, html {
   }
   
   .submit-button {
-    background-color: #007bff;
+    background-color: #000080;
     color: #fff;
     border: none;
     padding: 10px 20px;
     border-radius: 4px;
     cursor: pointer;
+    font-size: 20;
   }
   
   
-  h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
+  #display-name {
+    font-size: 2rem;
+    display: inline-block;
+    position: absolute;
+    color: #fff;
+  }
+  
+  #slogan{
+    font-size: 2rem;
+    display: inline-block;
+    position: absolute;
+    color: #fff;
   }
   
   p {

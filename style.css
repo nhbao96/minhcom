@@ -60,6 +60,12 @@ body, html {
     color: #fff;
   }
   
+#errorText{
+  font-size: 1rem;
+
+  color: red;
+}
+  
   #slogan{
     font-size: 2rem;
     display: inline-block;

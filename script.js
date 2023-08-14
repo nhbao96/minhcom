@@ -4,6 +4,22 @@ const content = document.getElementById('content');
 const displayName = document.getElementById('display-name');
 const sloganTag = document.getElementById('slogan');
 
+
+const numberInput = document.getElementById('birthdate');
+const errorText = document.getElementById('errorText');
+
+numberInput.addEventListener('input', function() {
+  const inputValue = parseFloat(numberInput.value);
+
+  if (inputValue <= 0 || inputValue > 20) {  
+    errorText.textContent = 'Số năm không hợp lệ';
+    numberInput.setCustomValidity('Invalid input');
+  } else {
+    errorText.textContent = '';
+    numberInput.setCustomValidity('');
+  }
+});
+
 form.addEventListener('submit', function(event) {
   event.preventDefault();
   

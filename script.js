@@ -24,19 +24,17 @@ form.addEventListener('submit', function(event) {
   event.preventDefault();
 
   const screenWidth = window.innerWidth;
-  const baseFontSize = 16; // Define your base font size here
-
-  // Calculate the dynamic font size based on the screen width
-  const fontSize = baseFontSize + screenWidth / 100;
 
   const username = document.getElementById('username').value;
 
   const birthdate = document.getElementById('birthdate').value; 
   overlay.style.display = 'none';
   content.style.display = 'block';
+  content.style.visibility = 'visible';
+  
   displayName.textContent =  birthdate +" năm nhà thuốc  "+username;
 
-  displayName.style.fontSize = fontSize;
+
   const h1Width = content.offsetWidth;
   const h1Height = content.offsetHeight;
   console.log("height = "+window.innerHeight);
@@ -62,6 +60,8 @@ form.addEventListener('submit', function(event) {
     case 16:
       slogan = "Tăng trưởng mãnh liệt vì sự khác biệt";
     break;
+    case 15 :
+      slogan = "Đoán bệnh hay vì mát tay";
     default:
       break;
   }
@@ -75,9 +75,7 @@ form.addEventListener('submit', function(event) {
 
   if(screenWidth < 768)
   {
-    content.style.maxWidth = "90%";
-    content.style.fontSize = "20px";      
+    content.style.maxWidth = "90%";    
   }
-  content.style.fontWeight = "700px";   
-
+  content.style.fontWeight = "bold";   
 });

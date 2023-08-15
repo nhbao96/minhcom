@@ -37,19 +37,18 @@ form.addEventListener('submit', function(event) {
   displayName.textContent =  birthdate +" năm nhà thuốc  "+username;
 
   displayName.style.fontSize = fontSize;
-  const h1Width = displayName.offsetWidth;
-  const h1Height = displayName.offsetHeight;
+  const h1Width = content.offsetWidth;
+  const h1Height = content.offsetHeight;
   console.log("height = "+window.innerHeight);
   console.log(" displayName.offsetHeight = "+  displayName.offsetHeight  );
-  var left = (window.innerWidth - h1Width) / 2;
-  var top = (window.innerHeight - h1Height) / 2 - h1Height;
-  displayName.style.left =`${left}px`;
-  displayName.style.top = `${top}px`;
+ 
+ // displayName.style.left =`${left}px`;
+ // displayName.style.top = `${top}px`;
 
 
   top += (5 +h1Height);
   var slogan = "Thuốc gần nhà bà con trông cậy";
-  switch(birthdate)
+  switch(parseInt(birthdate))
   {  
     case 19:
       slogan = "Kinh nghiệm là kiêm chỉ nam của dược sĩ";
@@ -66,9 +65,19 @@ form.addEventListener('submit', function(event) {
     default:
       break;
   }
-  sloganTag.textContent = slogan;
+  sloganTag.textContent = `"${slogan}"`;
   sloganTag.style.fontSize = fontSize;
   left = (window.innerWidth - sloganTag.offsetWidth) / 2;
-  sloganTag.style.left =`${left}px`;
-  sloganTag.style.top = `${top}px`;
+
+ var left = (window.innerWidth - h1Width) / 2;
+ var top = (window.innerHeight - h1Height) / 2 - h1Height;
+  content.style.boxShadow = "0px 0px 10px rgba(0, 0, 0, 0.2)";
+
+  if(screenWidth < 768)
+  {
+    content.style.maxWidth = "90%";
+    content.style.fontSize = "20px";      
+  }
+  content.style.fontWeight = "700px";   
+
 });
